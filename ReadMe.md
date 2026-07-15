@@ -1,3 +1,5 @@
+# A Dual-Core RTOS Scheduler Inference Framework
+### Code for the paper "An Efficient Inference Framework for Scheduler Side-Channel Analysis in Multi-Core RTOS"
 
 simulation/
 - clean_data.py  `check and delete logs without preemption`
@@ -28,6 +30,6 @@ qemu/
 
 log_full/
 
-QEMU emulation is only needed for Cortex-M3-based overhead measurement.
-
-It is essential to run the simulation first, then store the parsed log file in the **log_full** folder.
+### Note:
++ QEMU emulation is only needed for Cortex-M3-based overhead measurement.
++ It is essential to run the simulation first, then store the parsed log file in the **log_full** folder.
