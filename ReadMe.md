@@ -41,6 +41,6 @@ am64x/
 log_full/
 
 ### Note:
-+ QEMU emulation is only needed for Cortex-M3-based overhead measurement.
++ AM64 implementation is only needed for overhead measurement. The number will differ across different hardwares.
 + It is essential to run the simulation first, then store the parsed log file in the **log_full** folder.
 
