@@ -26,10 +26,21 @@ and save one prediction CSV per validation fold, compatible with assessment.py`
     python profiling.py [flags]<br>
     Via baseline:  python baseline.py --mode profile [flags]
 
-qemu/
+am64x/
+- Port of the scheduler-latency experiment to the TI SK-AM64 (AM6442)
+  starter kit. Two lines:
+  - `am64x/a53/` **(primary)** — dual Cortex-A53 running **FreeRTOS SMP**. 
+    One scheduler across two cache-coherent cores, which is the configuration 
+    the multi-core threat model actually needs. Adds task-migration
+    observation; every record is attributed to the core that produced it.
+  - `am64x/r5f/` (fallback) — single Cortex-R5F, closest analogue to the
+    STM32WB55 capture.
+- A53 line builds end-to-end with MCU+ SDK 11.01 (CCS `.out` and SBL-loadable
+  signed appimage). R5F line compiles.
 
 log_full/
 
 ### Note:
 + QEMU emulation is only needed for Cortex-M3-based overhead measurement.
 + It is essential to run the simulation first, then store the parsed log file in the **log_full** folder.
+
