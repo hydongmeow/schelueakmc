@@ -38,8 +38,6 @@ am64x/
 - A53 line builds end-to-end with MCU+ SDK 11.01 (CCS `.out` and SBL-loadable
   signed appimage). R5F line compiles.
 
-log_full/
-
 ### Note:
 + AM64 implementation is only needed for overhead measurement. The number will differ across different hardwares.
 + It is essential to run the simulation first, then store the parsed log file in the **log_full** folder.
